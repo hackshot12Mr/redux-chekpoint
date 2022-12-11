@@ -1,31 +1,58 @@
+body{
+  background: rgb(80, 73, 61);
+}
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  
 }
+.edit-conf{
+  margin-left: 50px;
+  width: 100px;
+  height: 50px;
+  color: red;
+  border-radius: 15px;
+}
+.edit-cancel{
+  margin-left: 50px;
+  width: 100px;
+  height: 50px;
+  color: red;
+  border-radius: 15px;
+}
+.Edit{
+  font-size: 25px;
+  border-radius: 15px;
+  color: rgb(195, 159, 159);
+}
+.delete,.complete{
+  font-size: 20px;
+  color: rgb(195, 159, 159);
+  border-radius: 15px;
+}
+.edit{
+  display: flex;
+  align-items: center; 
+  border-radius: 15px;
 
-.App-link {
-  color: #61dafb;
+
+  }
+
+.input{
+  font-size: 25px;
+  margin-top: 280px;
+  border-radius: 15px;
+}
+.add
+{
+  margin-left: 50px;
+  width: 100px;
+  height: 50px;
+  color: red;
+  border-radius: 15px;
+}
+form{
+
 }
 
 @keyframes App-logo-spin {

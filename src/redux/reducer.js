@@ -1,30 +1,30 @@
-import { COMPLETE, DELETE } from "./actionTypes"
+import {ADD ,COMPLETE, DELETE ,EDIT } from "./actionTypes"
 
-const init=[
-    {
-        id:Math.random(),
-        action:"Learn CSS",
-        isDone:true
-    },
-    {
-        id:Math.random(),
-        action:"Learn Redux",
-        isDone:false
-    }
-]
 
-const reducer=(state=init,{type,payload})=>{
+const init = {
+    todos: []
+};
+
+export const reducer = (state = init, { type, payload }) => {
     switch (type) {
-        case DELETE:
-            return state.filter(el=>el.id!==payload)
-        
-        case COMPLETE:
-            return state.map(el=>el.id==payload?{...el,isDone:!el.isDone}:el)
-            
-    
-        default:
-            return state
+        case ADD:
+            return {
+            ...state, todos: [...state.todos, payload]
+            }
+            case DELETE:
+               return {
+            ...state, todos: state.todos.filter(el => el.id !== payload)
+            }
+            case COMPLETE:
+               return{
+                ...state,toods:state.todos.map(el=>el.id===payload?{...el,isDone:!el.isDone}:el)
+                }
+            case EDIT:
+                return{
+                    ...state,todos:state.todos.map(el=>el.id===payload.id?{...el,...payload}:el)
+                    }
+         default:
+        return state
     }
 }
-
 export default reducer
