@@ -9,7 +9,7 @@ import Edit from "./Edit";
     <div>
         <h1>{task.action}</h1>
         <button onClick={()=>dispatch( handleDel(task.id))} className="delete">Delete</button>
-        <button onClick={()=>dispatch(handleComplete(task.id))} className='complete'>{task.isDone?"Undo":"Complete"}</button>
+        <button onClick={()=>dispatch(handleComplete(task.id))} className="complete">{task.isDone?"Undo":"Complete"}</button>
         <Edit task={task}/>
     </div>
   )
